@@ -5,6 +5,8 @@ server.py
 Stripe Sample.
 Python 3.6 or newer required.
 """
+from itertools import product
+from locale import currency
 import os
 from flask import Flask, redirect, request
 
@@ -20,6 +22,15 @@ app = Flask(__name__,
 
 YOUR_DOMAIN = 'http://localhost:4242'
 
+peisestua = stripe.Product.create(name="Peisestua, 1 natt")
+
+price = stripe.Price.create(
+    unit_amount=140000,
+    currency="nok", 
+    product=peisestua
+)
+
+
 @app.route('/create-checkout-session', methods=['POST'])
 def create_checkout_session():
     try:
@@ -27,7 +38,7 @@ def create_checkout_session():
             line_items=[
                 {
                     # Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                    'price': 'price_1LsWJ0CpUbUMkUvo4gs1nTrB',
+                    'price': price,
                     'quantity': 1,
                 },
             ],
