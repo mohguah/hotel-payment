@@ -1,0 +1,19 @@
+.product {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    // padding: 10px;
+    text-align: center;
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+
+button {
+    display: flex;
+    justify-content: center;
+}

@@ -12,7 +12,7 @@ import stripe
 # This is a public sample test API key.
 # Don’t submit any personally identifiable information in requests made with this key.
 # Sign in to see your own test API key embedded in code samples.
-stripe.api_key = 'sk_test_4S68v29DeKcE4RxJcrJnUn5s'
+stripe.api_key = 'sk_test_51LsUfGCpUbUMkUvohMy9I5yYVldD0sPXiK3bu7IKb5ych41AnqxHQOcWzTVVq8zB6K3yiM7SkOdNK0LD8QNwppdN00094VN0s6'
 
 app = Flask(__name__,
             static_url_path='',
@@ -27,7 +27,7 @@ def create_checkout_session():
             line_items=[
                 {
                     # Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                    'price': '{{PRICE_ID}}',
+                    'price': 'price_1LsWJ0CpUbUMkUvo4gs1nTrB',
                     'quantity': 1,
                 },
             ],
