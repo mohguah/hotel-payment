@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import './App.css';
-import ProductDisplay from "./Components/ProductDisplay";
+import './App.scss';
+import ProductDisplay from "./components/ProductDisplay";
 
 const Message = ({ message }) => (
   <section>
